@@ -11,7 +11,7 @@
             {%- assign url = navitem.url | replace:'%lang%', lang | replace: '%baseurl%', site.baseurl -%}
             {%- assign path = navitem.path | replace:'%lang%', lang | replace: '%baseurl%', site.baseurl -%}
             <li class="nav-item{%- if page.path == path %} active{%- endif -%}">
-                <a class="nav-link" href="{{ url }}">{{ trans.header.navbar[navitem.translation-key][lang] }}</a>
+                <a class="nav-link" href="{{ url|absolute_url }}">{{ trans.header.navbar[navitem.translation-key][lang] }}</a>
             </li>
             {% endfor %}
         </ul>
@@ -20,7 +20,8 @@
         <ul class="list-group list-group-horizontal">
             {% for lang in site.data.languages %}
             {%- assign language = lang[1] -%}
-            <li class="list-group-item"><a href="{{ language.url | replace:'%path%', page.path-key | replace:'%lang%', lang[0] | replace: '%baseurl%', site.baseurl  }}" hreflang="{{ lang[0] }}">{{language.icon}} {{ language.label }}</a>
+            {%- assign url = language.url | replace:'%path%', page.path-key | replace:'%lang%', lang[0] | replace: '%baseurl%', site.baseurl -%}
+            <li class="list-group-item"><a href="{{ url|absolute_url }}" hreflang="{{ lang[0] }}">{{language.icon}} {{ language.label }}</a>
             </li>
             {% endfor %}
         </ul>
