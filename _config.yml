@@ -1,4 +1,4 @@
-url: "https://long-term.support/"
+url: "https://long-term.support"
 baseurl: "/" # a subpath, e.g. /admin
 title: "Long Term Support"
 sass:
