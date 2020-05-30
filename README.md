@@ -1,6 +1,6 @@
 # Long Term Support
 
-https://github.com/code-lts/welcome#readme
+Get integrated here: https://github.com/code-lts/welcome#readme
 
 See: https://code.long-term.support/
 
