@@ -1,0 +1,26 @@
+header:
+  toggle-menu:
+    fr: "Déplier le menu"
+    en: "Toggle Menu"
+
+  brand:
+    fr: "Support Long Terme"
+    en: "Long Term Support"
+
+  navbar:
+    home:
+      fr: "Accueil"
+      en: "Home"
+    contact:
+      fr: "Contact"
+      en: "Contact"
+
+homepage:
+  motd:
+    fr: "Support Long Terme"
+    en: "Long Term Support"
+
+contact:
+  title:
+    fr: "Contact"
+    en: "Contact"

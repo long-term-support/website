@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <span class="navbar-brand mb-0 h1">{{ trans.header.brand[lang] }}</span>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="{{ trans.header.toggle-menu[lang] }}">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+            {% for nav in site.data.navbar %}
+            {%- assign navitem = nav[1] -%}
+            {%- assign url = navitem.url | replace:'%lang%', lang | replace: '%baseurl%', site.baseurl -%}
+            {%- assign path = navitem.path | replace:'%lang%', lang | replace: '%baseurl%', site.baseurl -%}
+            <li class="nav-item{%- if page.path == path %} active{%- endif -%}">
+                <a class="nav-link" href="{{ url }}">{{ trans.header.navbar[navitem.translation-key][lang] }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <form class="form-inline my-2 my-lg-0">
+        <ul class="list-group list-group-horizontal">
+            {% for lang in site.data.languages %}
+            {%- assign language = lang[1] -%}
+            <li class="list-group-item"><a href="{{ language.url | replace:'%path%', page.path-key | replace:'%lang%', lang[0] | replace: '%baseurl%', site.baseurl  }}" hreflang="{{ lang[0] }}">{{language.icon}} {{ language.label }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </form>
+</nav>

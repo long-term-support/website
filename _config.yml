@@ -1,0 +1,17 @@
+url: "https://long-term.support/"
+baseurl: "/" # a subpath, e.g. /admin
+title: "Long Term Support"
+sass:
+  sass_dir: assets/css
+
+defaults:
+  #languages
+  - scope:
+      path: ""
+    values:
+      lang: "en"
+      layout: default
+  - scope:
+      path: "fr"
+    values:
+      lang: "fr"

@@ -1,0 +1,8 @@
+home:
+  path: '%lang%/index.html'
+  url: '%baseurl%%lang%/index.html'
+  translation-key: 'home'
+contact:
+  path: '%lang%/contact.html'
+  url: '%baseurl%%lang%/contact.html'
+  translation-key: 'contact'

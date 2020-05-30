@@ -1,0 +1,8 @@
+en:
+  label: English
+  icon: 🇺🇸
+  url: '%baseurl%%lang%%path%'
+fr:
+  label: Français
+  icon: 🇫🇷
+  url: '%baseurl%%lang%%path%'
